@@ -1,13 +1,5 @@
 # config/cucumber.yml
 ##YAML Template
----
-android:  -f 'Slowhandcuke::Formatter' SCREENSHOT_PATH=features/screenshots/ RESET_BETWEEN_SCENARIOS=0 PLATFORM=android -r features/support -r features/android/support -r features/android/helpers -r features/step_definitions -r features/android/pages/ -f html -o android-report.html  -f json -o android-report.json  -f junit -o report  --tags @testrun  -v
-#android:  -f 'Slowhandcuke::Formatter' SCREENSHOT_PATH=features/screenshots RESET_BETWEEN_SCENARIOS=0 PLATFORM=android -r features/support -r features/android/support -r features/android/helpers -r features/step_definitions -r features/android/pages/ --tags @testrun -v  -f html -o android-report.html
 
-android1: RESET_BETWEEN_SCENARIOS=1 PLATFORM=android -r features/*/*
-
-android_login: RESET_BETWEEN_SCENARIOS=1 PLATFORM=android -r features/support -r features/android/support -r features/android/helpers -r features/step_definitions -r features/android/pages/ --tags @add_blog
-
-ios: APP_BUNDLE_PATH=ios-source/3.3.1/build/Applications/WordPress.app PLATFORM=ios -r features/support -r features/ios/support -r features/ios/helpers -r features/step_definitions -r features/ios/pages
-
-ios_invalid_login: RESET_BETWEEN_SCENARIOS=1 PLATFORM=ios -r features/support -r features/ios/support -r features/ios/helpers -r features/step_definitions -r features/ios/pages --tags @invalid_login
+ios: PLATFORM=ios -r features/support -r features/ios/ -r features/ios/support -r features/ios/helpers -r features/step_definitions -r features/ios/pages
+ # APP_BUNDLE_PATH=ios-source/3.3.1/build/Applications/WordPress.app

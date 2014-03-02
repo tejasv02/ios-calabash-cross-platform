@@ -5,9 +5,9 @@ if defined?(Calabash) && defined?(Calabash::Cucumber)
 
     def on_launch
       begin
-        wait_for_elements_exist(["alertView label text:'Update Available'"], :timeout => 30)
-        wait_for_animation
-        touch("view marked:'Dismiss'")
+        #wait_for_elements_exist(["alertView label text:'Update Available'"], :timeout => 30)
+        #wait_for_animation
+        #touch("view marked:'Dismiss'")
       rescue Calabash::Cucumber::WaitHelpers::WaitError
         #May not appear so ignore timeout error
       end

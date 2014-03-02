@@ -1,5 +1,3 @@
-require 'calabash-cucumber/cucumber'
-
 class BasePage < Calabash::IBase
 
   def initialize

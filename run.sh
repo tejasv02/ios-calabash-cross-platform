@@ -1,3 +1,4 @@
+#!/bin/sh
 echo "Choose scheme name and update it in SCHEME_XC"
 echo "click manage scheme and choose scheme name and find the build configuration BUILD_CONFIG" 
 echo "if your features(automation test features) are present in different folder rather than folder where project is present , mention the path in FEATURES_PATH

@@ -1,10 +1,8 @@
-USERS = {
-    :karl => {
-        :email => "karl@lesspainful.com",
-        :password => "Calabash123"
+USER_DATA = {
+    :valid => {
+        :website => "http://mobiletestworld.com",
     },
     :invalid => {
-        :email => "jonas2@lesspainful.com",
-        :password => "1234567892"
+        :email => "mobiletestworld.com",
     }
 }

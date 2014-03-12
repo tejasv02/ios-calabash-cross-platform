@@ -1,4 +1,7 @@
+require_relative '../ios/support/common_methods'
+
 class BasePage < Calabash::IBase
+  include CommonMethods
 
   def initialize
   end

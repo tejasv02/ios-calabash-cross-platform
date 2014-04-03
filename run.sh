@@ -12,7 +12,7 @@ BUILD_CONFIG="Debug"
 FEATURES_PATH="features"
 ARCHITECTURE_SELECTED=i386
 APPNAME="MJTransitionEffect"
-PROJ_LOC="../MJTransitionEffect-calabash/MJTransitionEffect.xcodeproj"
+PROJ_LOC=$3"MJTransitionEffect.xcodeproj"
 
 
 if [ $1 = "clean" ]

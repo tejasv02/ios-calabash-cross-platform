@@ -1,7 +1,6 @@
-@tests
+@test
 Feature: Home
 
-  @test1 @reset
   Scenario: Verify home screen
     Given I am on home screen
     Then I should see "Barcelona"
@@ -11,7 +10,6 @@ Feature: Home
     Then I press the "DONE" button
     Then I wait
 
-  @test2 @reset
   Scenario: Verify home screen
     Given I am on home screen
     Then I should see "Delhi"
@@ -22,7 +20,6 @@ Feature: Home
     Then I wait
 
 
-  @test3
   Scenario: scroll down the home screen and check last element
     Given I am on home screen
     When I scroll till "Paris" from home screen
@@ -33,8 +30,6 @@ Feature: Home
     Then I press the "DONE" button
     Then I wait
 
-
-  @test4
   Scenario: scroll down the home screen and check last element
     Given I am on home screen
     When I scroll till "Dublin" from home screen

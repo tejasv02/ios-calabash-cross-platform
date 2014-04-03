@@ -12,12 +12,12 @@ BUILD_CONFIG="Debug"
 FEATURES_PATH="features"
 ARCHITECTURE_SELECTED=i386
 APPNAME="MJTransitionEffect"
-PROJ_LOC="../MJTransitionEffect/MJTransitionEffect.xcodeproj"
+PROJ_LOC="../MJTransitionEffect-calabash/MJTransitionEffect.xcodeproj"
 
 
 if [ $1 = "clean" ]
 then
-xcodebuild  -scheme "${SCHEME_XC}" -project "${PROJ_LOC}" -configuration Debug ONLY_ACTIVE_ARCH=NO -sdk iphonesimulator clean
+xcodebuild  -scheme "${SCHEME_XC}" -project "${PROJ_LOC}" -configuration Debug ONLY_ACTIVE_ARCH=NO -sdk iphonesimulator clean build
 fi
 
 if [ $1 = "build" ]
@@ -30,4 +30,6 @@ BUILT_PRODUCTS_DIR=$(xcodebuild -project "${PROJ_LOC}" ARCHS="${ARCHITECTURE_SEL
 APP_BUNDLE_PATH_VAR="${BUILT_PRODUCTS_DIR}"/"${BUILD_CONFIG}"-iphonesimulator/"${APPNAME}".app
 echo $APP_BUNDLE_PATH_VAR
 # sample path - /Users/username/Library/Developer/Xcode/DerivedData/MJTransitionEffect-gotpnqucjsgpcjgbhavbjvjbndfs/Build/Products/Debug-iphonesimulator/MJTransitionEffect.app
+echo BUNDLE_ID=$BUNDLE DEVICE=iphone APP_BUNDLE_PATH="${APP_BUNDLE_PATH_VAR}" bundle exec cucumber -p ios features/  --tag $2
+
 BUNDLE_ID=$BUNDLE DEVICE=iphone APP_BUNDLE_PATH="${APP_BUNDLE_PATH_VAR}" bundle exec cucumber -p ios features/  --tag $2

@@ -8,3 +8,5 @@ elsif ENV['PLATFORM'] == 'android'
   require 'calabash-android/cucumber'
   require_relative '../../features/android/base_page'
 end
+
+World(TestModule)

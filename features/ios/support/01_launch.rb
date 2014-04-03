@@ -14,11 +14,9 @@
 #                                      #
 ########################################
 
-
-
 Before do |scenario|
   @calabash_launcher = Calabash::Cucumber::Launcher.new
-
+  initialize_all
   scenario_tags = scenario.source_tag_names
   if scenario_tags.include?('@reset')
     @calabash_launcher.reset_app_jail

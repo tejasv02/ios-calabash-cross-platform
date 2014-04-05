@@ -6,7 +6,6 @@ or else remove the argument."
 echo "APPNAME - name of the application usually same as the scheme name"
 echo "PROJ_LOC - location of xcode project if thats same as current folder remove this option."
 
-
 SCHEME_XC="MJTransitionEffect-cal"
 BUILD_CONFIG="Debug"
 FEATURES_PATH="features"

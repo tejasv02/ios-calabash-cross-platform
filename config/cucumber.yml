@@ -1,5 +1,5 @@
 # config/cucumber.yml
 ##YAML Template
 
-ios: -f 'Slowhandcuke::Formatter' PLATFORM=ios -r features/support -r features/ios/ -r features/ios/support -r features/ios/helpers -r features/step_definitions -r features/ios/pages -f html -o ios-report.html
+ios: -f 'Slowhandcuke::Formatter' PLATFORM=ios -r features/support -r features/ios/ -r features/ios/support -r features/ios/helpers -r features/step_definitions -r features/ios/pages -f html -o ios-report.html -f junit -o features/report/junit -f json -o features/report/report.json
  # APP_BUNDLE_PATH=ios-source/3.3.1/build/Applications/WordPress.app
